@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de automovil</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div class="main-container">      
+        <div class="main-datos">
+            <div class="encabezado">
+                <h2>Interes Compuesto</h2>
+                <p>Calcular el monto a pagar por un automovil</p>
+            </div>
+            <div class="ingresar_Datos">
+                <br>
+                <h3>Datos iniciales</h3>
+                <br>
+                <form method="post" name="ingresarDatos" id="ingresarDatos" action="">
+                    <input type="text" name="marca" id="marca" value="" placeholder="Marca del automovil" required>
+                    <input type="number" name="precio" id="precio" value="" min="100000.00" max="1000000.00" placeholder="Precio del automovil" required>
+                    <input type="number" name="cuotaInicial" id="cuotaInicial" value="" min="10.00" max="100.00" placeholder="Cuota Inicial en %" required>
+                    <select name="periodo" id="periodo" required>
+                        <optgroup label="Periodo">
+                            <option value="3" >3 meses</option>
+                            <option value="6">6 meses</option>
+                            <option value="9">9 meses</option>
+                            <option value="12">12 meses</option>
+                            <option value="18">18 meses</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <br>
+                    <input type="submit" class="agregar" name="agregar" value="Agregar Datos">
+                    <input type="reset" class="borrar" name="borrar" value="Borar Datos">
+                </form>
+                <br>
+
+            </div>
+            <div class="tablaDinamica">
+                <table id="TablaDatos">
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Precio</th>
+                            <th>Cuota Inicial</th>
+                            <th>Periodo</th>
+                            <th>Interés</th>
+                            <th>Cuota</th>
+                            <th>Precio Final</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </table>
+                <br>
+                <a href="../index.html">Volver a la pagina principal</a>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</body>
+<script src="js/validacion.js"></script>
+<footer>
+    <div class="pie">
+        <p id="misDatos">Astudillo Pérez Edwin Uriel<br>4IV7</p>
+    </div>
+</footer>
+</html>
