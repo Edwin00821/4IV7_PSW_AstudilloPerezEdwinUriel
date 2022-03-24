@@ -1,0 +1,116 @@
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #eee;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: cadetblue;
+}
+
+h2, h3{
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.container{
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.problema-container{
+    background-color: #24303c;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 
+                0 1px 2px rgba(0, 0, 0, 0.24);   
+}
+
+.problema-title{
+    color: rgba(255, 255, 255, 0.57);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.problema-content{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+input.problema-input{
+    width: 100%;
+    padding: 16px 18px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    border: none;
+    color: #000;
+    font-size: 16px;
+}
+
+button.problema-button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background: #141414;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+button.problema-button span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+button.problema-button::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #227dd8b2;
+    position: absolute;
+    z-index: 1;
+    top: -80px;
+    left: 0;
+    transition: .3s ease-in-out all;
+}
+
+button.problema-button:hover::after{
+    top: 0;
+}
+
+.problema-output{
+    width: 70%;
+    color: rgba(202, 202, 202, 0.7);
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.table.problema-table{
+    margin: 1rem;
+    border: 1px solid rgb(208, 208, 208);
+}
