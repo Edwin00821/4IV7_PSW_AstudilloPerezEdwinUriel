@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Problema 1 -->
+        <div class="problema-container">
+            <h2 class="problema-title">Problema #1</h2>
+            <h3>
+                Suponga que un individuo desa invertir su capital en un banco y dea saber cuanto dinero 
+                ganará después de un mes si el banco paga a razón de 2% mensual.
+            </h3>
+            <div class="problema-content">
+                <input type="number" class="problema-input" placeholder="Ingresa el capital a invertir" id="p1-input-1"
+                    onkeypress="return validarnum(event)" >
+                    
+                <input type="range" class="problema-input" id="p1-input-2" placeholder="Cantidad de meses a invertir" min="2" max="48">
+                     
+                <strong><div id="p1-output-2"></div></strong>
+
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="p1()"><span>Calcular capital</span></button>
+                    
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrarp1()" ><span>Borrar Datos</span></button>
+
+                <pre class="problema-output" id="p1-output">Esperando datos...</pre>
+            </div>
+        </div>
+
+        <!-- Problema 2 -->
+        <div class="problema-container">
+            <h2 class="problema-title">Problema #2</h2>
+            <h3>
+                Un vendedor recibe un sueldo base mas un 10% extra por comisión de sus ventas, el
+                vendedor desea saber cuanto dinero obtendrá por concepto de comisiones por las tres ventas
+                que realiza en el mes y el total que recibirá en el mes tomando en cuenta su sueldo base
+                y comisiones.
+                <br>
+                
+            </h3>
+            <div class="problema-content">
+                <input type="number" class="problema-input" id="p2-input-1" placeholder="Ingrese su sueldo base"
+                    onkeypress="return validarnum(event)" >
+                
+                <input type="number" class="problema-input" id="p2-input-2" placeholder="Ingrese la venta 1"
+                    onkeypress="return validarnum(event)" >
+
+                <input type="number" class="problema-input" id="p2-input-3" placeholder="Ingrese la venta 2"
+                    onkeypress="return validarnum(event)" >
+
+                <input type="number" class="problema-input" id="p2-input-4" placeholder="Ingrese la venta 3"
+                    onkeypress="return validarnum(event)" >
+                    
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="p2()"><span>Calcular porcentaje</span></button>
+                    
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrar2()" ><span>Borrar Datos</span></button>
+                
+                <pre class="problema-output" id="p2-output">Esperando datos...</pre>           
+            </div>
+        </div>        
+
+        <!-- Problema 3 -->
+        <div class="problema-container">
+            <h2 class="problema-title">Problema #3</h2>
+            <h3>
+                Una tienda ofrece un descuento del 15% sobre el total de la compra y un cliente desea
+                saber cuanto deberá pagar finalmente por su compra
+                <br>
+                
+            </h3>
+            <div class="problema-content">
+                <input type="number" class="problema-input" id="p3-input-1" placeholder="Ingrese el costo de su compra"
+                onkeypress="return validarnum(event)">
+                    
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="p3()"><span>Calcular porcentaje</span></button>
+                    
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrarp3()" ><span>Borrar Datos</span></button>
+                
+                <pre class="problema-output" id="p3-output">Esperando datos...</pre>           
+            </div>
+        </div>
+        
+        <!-- Problema 4 -->
+        <div class="problema-container">
+            <h2 class="problema-title">Problema #4</h2>
+            <h3>
+                Un alumno desea saber cual será su calificacion final en la materia de Algoritmos. dicha
+                calificación se compone de los siguientes porcentajes.
+                <br>
+                55% del promedio de sus tres calificaciones parciales.
+                30% de la calificacion del examen final.
+                15% de la calificacion de un trabajo final.
+                <br>
+                
+            </h3>
+            <div class="problema-content">
+                <input type="number" class="problema-input" id="p4-input-1" placeholder="Ingrese su promedio"
+                    onkeypress="return validarnum(event)" >
+                
+                <input type="number" class="problema-input" id="p4-input-2" placeholder="Ingrese la calificacion del examen fianal"
+                    onkeypress="return validarnum(event)" >
+                
+                <input type="number" class="problema-input" id="p4-input-3" placeholder="Ingrese la calificacion del examen fianal"
+                onkeypress="return validarnum(event)" >
+                
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="p4()"><span>Calcular porcentaje</span></button>
+                    
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrarp4()" ><span>Borrar Datos</span></button>
+                
+                <pre class="problema-output" id="p4-output">Esperando datos...</pre>           
+            </div>
+        </div>
+
+        <!-- Problema 5 -->
+        <div class="problema-container">
+            <h2 class="problema-title">Problema #5</h2>
+            <h3>
+                Un maestro desa saber que porcentaje de hombres y que porcentaje 
+                de mujeres hay en un grupo de estudiantes
+                <br>
+                
+            </h3>
+            <div class="problema-content">
+                <input type="number" class="problema-input" id="p5-input-1" placeholder="¿Cuantos hombres hay en el grupo?"
+                    onkeypress="return validarnum(event)" >
+                
+                <input type="number" class="problema-input" id="p5-input-2" placeholder="¿Cuantas mujeres hay en el grupo?"
+                    onkeypress="return validarnum(event)" >
+                    
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="p5()"><span>Calcular porcentaje</span></button>
+                    
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="borrarp5()" ><span>Borrar Datos</span></button>
+                
+                <pre class="problema-output" id="p5-output">Esperando datos...</pre>           
+            </div>
+        </div>
+
+        <!-- Problema 6 -->
+        <div class="problema-container">
+            <h2 class="problema-title">Problema #6</h2>
+            <h3>
+                Realizar un algoritmo que calcule la edad de una persona
+            </h3>
+            <div class="problema-content">
+                <input type="text" class="problema-input" id="p6-input"
+                placeholder="dd/mm/aa">
+                <button type="button" class="problema-button" 
+                style="margin-top: 1rem;" onclick="p6()"><span>Calcular edad</span></button>
+                <pre class="problema-output" id="p6-output">Esperando datos...</pre>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/ejercicios.js" ></script>
+    
+    
+</body>
+</html>
